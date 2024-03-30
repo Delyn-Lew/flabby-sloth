@@ -1,41 +1,66 @@
 * {
-            margin: 0;
-            padding: 0;
-        }
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            background-color: lightblue;
-            min-height: 1100px;
-        }
+body {
+    background-color: lightblue;
+    min-height: 1100px;
+}
 
-        #container-game {
-            height: 800px;
-            width: 600px;
-            border: 1px solid black;
-            /* background-color: white; */
-            background: url(https://pics.craiyon.com/2023-09-23/84b96e246d3d4c1981362635774ff451.webp);
-            background-size: cover;
-            margin: 1rem auto;
-            overflow: hidden;
-        }
+#container-game {
+    height: 800px;
+    width: 600px;
+    border: 1px solid black;
+    background-color: white;
+    background: url(https://pics.craiyon.com/2023-09-23/84b96e246d3d4c1981362635774ff451.webp);
+    background-size: cover;
+    margin: 1rem auto;
+    overflow: hidden;
+}
 
-        #tree {
-            width: 50px;
-            height: 800px;
-            background-color: brown;
-            position: relative;
-            left: 600px;
-            animation-name: tree;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-direction: linear;
-        }
+#treeUp {
+    width: 50px;
+    height: 200px;
+    background-color: #dc5800;
+    position: relative;
+    left: 600px;
+    animation-name: tree;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
 
-        @keyframes tree {
-            0% {
-                left: 600px;
-            }
-            100% {
-                left: -100px;
-            }
-        }
+#treeDown {
+    width: 50px;
+    height: 450px;
+    background-color: #dc5800;
+    position: relative;
+    left: 600px;
+    bottom: -150px;
+    animation-name: tree;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+
+@keyframes tree {
+    0% {
+        left: 600px;
+    }
+    100% {
+        left: -100px;
+    }
+}
+
+#bear {
+    position: fixed;
+    top: 250px;
+    height: 70px;
+    width: 80px;
+}
+
+#bear img {
+    height: 70px;
+    width: 80px;
+}
