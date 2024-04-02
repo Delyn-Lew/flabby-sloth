@@ -1,16 +1,28 @@
-//* constant
-const bear = document.getElementById("bear");
-const treeUp = document.getElementById("treeUp");
-const treeDown = document.getElementById("treeDown");
+document.addEventListener('DOMContentLoaded', () => {
+   const bear = document.querySelector('.bear')
+   const gameDisplay = document.querySelector('.container-game')
+   const ground = document.querySelector('.ground')
 
-//* variables
-let gravity = 9;
+   let bearLeft = 260;
+   let bearBottom = 120;
+   let gravity = 2;
 
-//* functions
-function bearThruHole() {
-    let gap = ((Math.random() * 200) + 300);
-    treeUp.style.height = gap + "px";
+   function startGame() {
+    bearBottom -= gravity;
+    bear.style.bottom = bearBottom + "px";
+    bear.style.left = bearLeft + "px";
+   }
+let gameInterval = setInterval(startGame,10);
+
+function moveItwithSpace(e) {
+    if(e.keyCode === 32) {
+        jump();
+    }
 }
-//* event listeners
-
-treeUp.addEventListener("animationiteration", bearThruHole);
+function jump() {
+    if(bearBottom < 500) bearBottom += 50;
+    bear.style.bottom = bearBottom + "px";
+    console.log(bearBottom);
+}
+document.addEventListener("keyup",moveItwithSpace);
+})
