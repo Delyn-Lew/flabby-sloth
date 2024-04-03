@@ -8,6 +8,7 @@ body {
     min-height: 755px;
     display: grid;
     place-items: center;
+    margin-top: 5%;
 }
 
 .container-game {
@@ -54,7 +55,6 @@ body {
     background-color: #dc5800;
     position: relative;
     left: 600px;
-    overflow: hidden;
     animation-name: tree;
     animation-duration: 3s;
     animation-iteration-count: infinite;

@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
    const treeUp = document.querySelector('.treeUp')
    const treeDown = document.querySelector('.treeDown')
 
-   let bearLeft = 160;
-   let bearBottom = 120;
+   let bearLeft = 50;
+   let bearBottom = 300;
    let gravity = 2;
    let isGameOver = false;
 
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bear.style.left = bearLeft + "px";
     treeUp.style.animationPlayState = "running";
     treeDown.style.animationPlayState = "running";
+    collisionDetector();
     }
     if (bearBottom <= 0) {
         gameOver();
@@ -51,4 +52,24 @@ function gameOver() {
     treeUp.style.animationPlayState = "paused"
     treeDown.style.animationPlayState = "paused"
 }
+
+function collisionDetector(){
+    const bearBounding = bear.getBoundingClientRect();
+    const treeUpBounding = treeUp.getBoundingClientRect();
+    const treeDownBounding = treeDown.getBoundingClientRect();
+
+    if (
+      (bearBounding.x < treeUpBounding.x + treeUpBounding.width &&
+        bearBounding.x + bearBounding.width > treeUpBounding.x &&
+        bearBounding.y < treeUpBounding.y + treeUpBounding.height &&
+        bearBounding.y + bearBounding.height > treeUpBounding.y) ||
+      (bearBounding.x < treeDownBounding.x + treeDownBounding.width &&
+        bearBounding.x + bearBounding.width > treeDownBounding.x &&
+        bearBounding.y + bearBounding.height > treeDownBounding.y &&
+        bearBounding.y < treeDownBounding.y + treeDownBounding.height)
+    ) {
+      gameOver();
+    }
+}
+
 })
