@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
    const bear = document.querySelector('.bear')
    const gameDisplay = document.querySelector('.container-game')
    const ground = document.querySelector('.ground')
+   const treeUp = document.querySelector('.treeUp')
+   const treeDown = document.querySelector('.treeDown')
 
-   let bearLeft = 260;
+   let bearLeft = 160;
    let bearBottom = 120;
    let gravity = 2;
 
@@ -25,4 +27,9 @@ function jump() {
     console.log(bearBottom);
 }
 document.addEventListener("keyup",moveItwithSpace);
+
+treeUp.addEventListener("animationiteration",()=>{
+    let gap = ((Math.random() * 300) + 100);
+    treeUp.style.height = gap + "px";
+});
 })

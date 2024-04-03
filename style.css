@@ -13,7 +13,7 @@ body {
 .container-game {
     height: 800px;
     width: 600px;
-    border: 1px solid black;
+    border: 1px solid rgb(134, 112, 112);
     position: absolute;
 }
 
@@ -45,4 +45,40 @@ body {
 .bear img {
     height: 70px;
     width: 80px;
+}
+
+.treeUp {
+    height: 200px;
+    width: 70px;
+    background-color: #dc5800;
+    position: relative;
+    left: 600px;
+    overflow: hidden;
+    animation-name: tree;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+
+.treeDown {
+    height: 450px;
+    width: 70px;
+    background-color: #dc5800;
+    position: relative;
+    left: 600px;
+    bottom: -150px;
+    animation-name: tree;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+
+}
+
+@keyframes tree {
+    0% {
+        left: 600px;
+    }
+    100% {
+        left: -150px;
+    }
 }
