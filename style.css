@@ -34,6 +34,7 @@ body {
     top: 600px;
     position: absolute;
 }
+
 .bear {
     position: absolute;
     height: 70px;
@@ -55,7 +56,7 @@ body {
     left: 600px;
     overflow: hidden;
     animation-name: tree;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: linear;
 }
@@ -68,7 +69,7 @@ body {
     left: 600px;
     bottom: -150px;
     animation-name: tree;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: linear;
 
