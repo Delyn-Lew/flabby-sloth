@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-   const bear = document.querySelector('.bear')
-   const gameDisplay = document.querySelector('.container-game')
-   const ground = document.querySelector('.ground')
-   const treeUp = document.querySelector('.treeUp')
-   const treeDown = document.querySelector('.treeDown')
+  // cache elements 
+  const bear = document.querySelector('.bear')
+  const gameDisplay = document.querySelector('.container-game')
+  const ground = document.querySelector('.ground')
+  const treeUp = document.querySelector('.treeUp')
+  const treeDown = document.querySelector('.treeDown')
 
-   let bearLeft = 50;
-   let bearBottom = 300;
-   let gravity = 2;
-   let isGameOver = false;
 
-   function startGame() {
+  let bearLeft = 50;
+  let bearBottom = 300;
+  let gravity = 2;
+  let isGameOver = false;
+  let score = 0;
+
+  function startGame() {
     if (bearBottom > 0){
     bearBottom -= gravity;
     bear.style.bottom = bearBottom + "px";
@@ -41,6 +44,8 @@ document.addEventListener("keyup",moveItwithSpace);
 treeUp.addEventListener("animationiteration", intoGap)
 
 function intoGap(){
+  score++;
+  updateScoreDisplay();
     let gap = ((Math.random() * 300) + 100);
     treeUp.style.height = gap + "px";
 };
@@ -71,5 +76,8 @@ function collisionDetector(){
       gameOver();
     }
 }
-
+function updateScoreDisplay(){
+  const scoreDisplay = document.getElementById('score');
+  scoreDisplay.textContent = `Score: ${score}`;
+}
 })
