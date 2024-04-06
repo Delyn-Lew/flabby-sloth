@@ -21,9 +21,9 @@ body {
 }
 
 .sky {
-    height: 600px;
+    height: 700px;
     width: 600px;
-    background: url(https://pics.craiyon.com/2023-09-23/84b96e246d3d4c1981362635774ff451.webp);
+    background: url(ForestBackground.jpeg);
     background-size: cover;
     overflow: hidden;
     position: absolute;
@@ -31,9 +31,11 @@ body {
 
 .ground {
     background-color: darkslategray;
-    height: 200px;
+    background: url(Wood\ Backgrounds\ Wallpapers.jpeg);
+    background-size: cover;
+    height: 100px;
     width: 600px;
-    top: 600px;
+    top: 700px;
     position: absolute;
 }
 
@@ -55,7 +57,7 @@ body {
     position: relative;
     left: 600px;
     animation-name: tree;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: linear;
 }
@@ -68,7 +70,7 @@ body {
     left: 600px;
     bottom: -150px;
     animation-name: tree;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: linear;
 
@@ -83,36 +85,20 @@ body {
     }
 }
 
-#startPage {
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    display: none;
-    text-align: center;
-}
-
-.startBtn {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 11px;
-    background-color: lightgreen;
-    color: black;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    cursor: pointer;
-}
-
-#text {
-    margin-top: 1rem;
-    font-size: 2rem;
-    color: seashell;
-}
-
 #score {
     color: white;
     font-size: 24px;
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 250px;
+}
+
+.startModal {
+    height: 600px;
+    width: 400px;
+    z-index: 5;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }

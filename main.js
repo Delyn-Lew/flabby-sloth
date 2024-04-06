@@ -1,17 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
   // cache elements 
-  const bear = document.querySelector('.bear')
-  const gameDisplay = document.querySelector('.container-game')
-  const ground = document.querySelector('.ground')
-  const treeUp = document.querySelector('.treeUp')
-  const treeDown = document.querySelector('.treeDown')
+  const bear = document.querySelector('.bear');
+  const gameDisplay = document.querySelector('.container-game');
+  const ground = document.querySelector('.ground');
+  const treeUp = document.querySelector('.treeUp');
+  const treeDown = document.querySelector('.treeDown');
+  const startModal = document.getElementById('startPage');
+  const startBtn = document.getElementById('startBtn');
 
-
+// state variables
   let bearLeft = 50;
-  let bearBottom = 300;
+  let bearBottom = 350;
   let gravity = 2;
   let isGameOver = false;
+  let isRunning = false;
   let score = 0;
+  
+  startModal.style.display = "block";
+
+  startBtn.addEventListener("click", function(){
+    startModal.style.display = "none";
+    isRunning = true;
+    gameInterval = setInterval(startGame,10);
+    document.addEventListener("keyup",moveItwithSpace);
+  });
 
   function startGame() {
     if (bearBottom > 0){
@@ -80,4 +92,5 @@ function updateScoreDisplay(){
   const scoreDisplay = document.getElementById('score');
   scoreDisplay.textContent = `Score: ${score}`;
 }
+
 })
