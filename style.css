@@ -18,19 +18,60 @@ body {
     width: 600px;
     border: 1px solid rgb(134, 112, 112);
     position: absolute;
+    z-index: 2;
+}
+
+.startModal {
+    z-index: 5;
+    height: 800px;
+    width: 600px;
+    border: 1px solid rgb(134, 112, 112);
+    background-position: center;
+    text-align: center;
+    color: whitesmoke;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(ForestBackground.jpeg);
+    background-size: cover;
+}
+
+.gameEndModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /* height: 150px; */
+    /* width: 150px; */
+    /* border-radius: 10px; */
+    padding: 20px;
+    border: 1px solid #888;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#restartBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .sky {
     height: 700px;
     width: 600px;
     background: url(ForestBackground.jpeg);
+    background-position: center;
     background-size: cover;
     overflow: hidden;
     position: absolute;
 }
 
 .ground {
-    background-color: darkslategray;
+    /* background-color: darkslategray; */
     background: url(Wood\ Backgrounds\ Wallpapers.jpeg);
     background-size: cover;
     height: 100px;
@@ -86,19 +127,9 @@ body {
 }
 
 #score {
-    color: white;
-    font-size: 24px;
+    color: black;
+    font-size: 30px;
     position: absolute;
     top: 10px;
     right: 250px;
-}
-
-.startModal {
-    height: 600px;
-    width: 400px;
-    z-index: 5;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
 }
