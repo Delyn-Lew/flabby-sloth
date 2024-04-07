@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0;
   let gameInterval;
   
+  // paused animation for upper tree and lower tree 
+  treeUp.style.animationPlayState = "paused";
+  treeDown.style.animationPlayState = "paused";
+
   startModal.style.display = "block";
 
   startBtn.addEventListener("click", function() {
@@ -26,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     isRunning = true;
     document.addEventListener("keyup", moveItwithSpace);
     gameInterval = setInterval(startGame, 10)
+    // animation only starts when start button is clicked
+    treeUp.style.animationPlayState = "running"; 
+    treeDown.style.animationPlayState = "running";
     startGame();
   });
 
