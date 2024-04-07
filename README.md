@@ -14,11 +14,12 @@ The game will continue through until a collision of tree or ground is detected. 
 
 ## Actual Game Images
 
-_Start Page_
+**Start Page**
 <p align ="center">
 <img src = "FlappyBearStartPage.png" height = "300px">
 </p>
-_Game over page_
+
+**Game over Page**
 <p align ="center">
 <img src = "FlappyBearGameOverPage.png" height = "300px">
 </p>
