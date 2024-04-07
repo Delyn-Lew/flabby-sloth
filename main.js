@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     treeUp.style.animationPlayState = "running"; 
     treeDown.style.animationPlayState = "running";
     startGame();
+    const highScore = localStorage.getItem("highScore");
+    if (!highScore || score > highScore) {
+      localStorage.setItem("highScore", score);
+      updateHighScoreDisplay(score);
+    }
   });
 
   restartBtn.addEventListener("click", function(){
@@ -73,6 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
     treeUp.style.animationPlayState = "paused"
     treeDown.style.animationPlayState = "paused"
     gameEndModal.style.display = 'block';
+
+    const highScore = localStorage.getItem("highScore");
+    if(!highScore || score > highScore) {
+      localStorage.setItem("highScore", score);
+    }
+    updateHighScoreDisplay(highScore);
   }
   
   function moveItwithSpace(e) {
@@ -115,9 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
             gameOver();
           }
         }
-        function updateScoreDisplay(){
-          const scoreDisplay = document.getElementById('score');
+
+        function updateScoreDisplay() {
+          const scoreDisplay = document.getElementById("score");
           scoreDisplay.textContent = `Score: ${score}`;
         }
-        
-      })
+
+        function updateHighScoreDisplay(highScore) {
+          const highScoreDisplay = document.getElementById("highScore");
+          highScoreDisplay.textContent = `High Score: ${highScore}`;
+        }
+      });
