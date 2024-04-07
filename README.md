@@ -9,13 +9,13 @@ Gravity acts on the bear, it automatically falls once game has started and would
 The game will continue through until a collision of tree or ground is detected. <br>
 
 ## Actual Game Images
-Start Page
+_Start Page_
 <p align ="center">
-<img src = "FlappyBearStartPage.png">
+<img src = "FlappyBearStartPage.png" height = "300px">
 </p>
-Game over page
+_Game over page_
 <p align ="center">
-<img src = "FlappyBearEndPage.png">
+<img src = "FlappyBearEndPage.png" height = "300px">
 </p>
 
 ## Technologies Used
