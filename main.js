@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // state variables
   let bearLeft = 50;
-  let bearBottom = 350;
+  let bearBottom = 400;
   let gravity = 2;
   let isGameOver = false;
   let isRunning = false;
@@ -82,8 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const highScore = localStorage.getItem("highScore");
     if(!highScore || score > highScore) {
       localStorage.setItem("highScore", score);
+      updateHighScoreDisplay(score);
+    } else {
+      updateHighScoreDisplay(highScore);
     }
-    updateHighScoreDisplay(highScore);
   }
   
   function moveItwithSpace(e) {
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   treeUp.addEventListener("animationiteration", intoGap)
   
   function intoGap(){
-    let gap = ((Math.random() * 300) + 100);
+    let gap = ((Math.random() * 100) + 100);
     treeUp.style.height = gap + "px";
     score++;
     updateScoreDisplay();

@@ -81,14 +81,14 @@ body {
 }
 
 .bear {
+    height: 60px;
+    width: 60px;
     position: absolute;
-    height: 70px;
-    width: 80px;
 }
 
 .bear img {
-    height: 70px;
-    width: 80px;
+    height: 50px;
+    width: 60px;
 }
 
 .treeUp {
