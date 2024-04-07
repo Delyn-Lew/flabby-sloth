@@ -1,12 +1,9 @@
 
 # Flappy Bear
-***
 
 [flappy-bear.vercel.app](flappy-bear.vercel.app)
 
 ## Introduction
-
-***
 
 This game is inspired by the famous casual mobile game, Flappy Bird.
 Flappy bird has been around for 11 years now, and at some point of our lives we might have been addicted to playing it. <br><br>
@@ -16,8 +13,6 @@ Gravity acts on the bear, it automatically falls once game has started and would
 The game will continue through until a collision of tree or ground is detected. <br>
 
 ## Actual Game Images
-
-***
 
 _Start Page_
 <p align ="center">
@@ -30,19 +25,13 @@ _Game over page_
 
 ## Technologies Used
 
-***
-
 Javascript, HTML and CSS
 
 ## Getting Started
 
-***
-
 To get the game started, click on let's start button. Press and release spacebar such that the bear will jump through the gaps in the tree.
 
 ## Next Steps
-
-***
 
 - Adding on difficulty level for players to choose
 - Different characters to choose from
