@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   treeUp.addEventListener("animationiteration", intoGap)
   
   function intoGap(){
-    let gap = ((Math.random() * 100) + 100);
+    let gap = ((Math.random() * 200) + 100);
     treeUp.style.height = gap + "px";
     score++;
     updateScoreDisplay();
@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const bearBounding = bear.getBoundingClientRect();
     const treeUpBounding = treeUp.getBoundingClientRect();
     const treeDownBounding = treeDown.getBoundingClientRect();
-    
     if (
       (bearBounding.x < treeUpBounding.x + treeUpBounding.width &&
         bearBounding.x + bearBounding.width > treeUpBounding.x &&
@@ -128,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gameOver();
           }
         }
-
+        
         function updateScoreDisplay() {
           const scoreDisplay = document.getElementById("score");
           scoreDisplay.textContent = `Score: ${score}`;
