@@ -7,3 +7,16 @@ With flappy bear, instead of flying we will now have a bear jumping through tree
 The player will control the bear with the spacebar and maneuvere through the trees that has random heights. <br>
 Gravity acts on the bear, it automatically falls once game has started and would only jump when the spacebar is release!
 The game will continue through until a collision of tree or ground is detected. <br>
+
+## Actual Game Images
+Start Page
+<p align ="center">
+<img src = url(FlappyBearStartPage.png)>
+</p>
+Game over page
+<p align ="center">
+<img src = url(FlappyBearEndPage.png)>
+</p>
+
+## Technologies Used
+Javascript, HTML and CSS
