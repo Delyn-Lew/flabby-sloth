@@ -1,7 +1,6 @@
-
 # Flappy Bear
 
-[flappy-bear.vercel.app](flappy-bear.vercel.app)
+[Click here to enter my game!](flappy-bear.vercel.app)
 
 ## Introduction
 
@@ -12,16 +11,24 @@ The player will control the bear with the spacebar and maneuvere through the tre
 Gravity acts on the bear, it automatically falls once game has started and would only jump when the spacebar is release!
 The game will continue through until a collision of tree or ground is detected. <br>
 
+## Wireframe
+
+<p align ="center">
+<img src = "FlappyBearWireframe.png" height = "350px">
+</p>
+
 ## Actual Game Images
 
 **Start Page**
+
 <p align ="center">
-<img src = "FlappyBearStartPage.png" height = "300px">
+<img src = "FlappyBearStartPage.png" height = "350px">
 </p>
 
 **Game over Page**
+
 <p align ="center">
-<img src = "FlappyBearGameOverPage.png" height = "300px">
+<img src = "FlappyBearGameOverPage.png" height = "350px">
 </p>
 
 ## Technologies Used
